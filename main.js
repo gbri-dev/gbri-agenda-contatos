@@ -1,9 +1,22 @@
 const form = document.getElementById('form-contatos')
+const button = form.querySelector('button')
+const inputTell = document.getElementById('numero')
 const whatsappIcon = '<img src="images/whatsapp.png" alt="whatsapp"></img>'
 const arrayContatos = []
 const arrayNumeros = []
 
 let linhas = ''
+
+inputTell.addEventListener('keyup', function(){    
+  let regex = /^[0-9]{10,11}$/
+  if(regex.test(inputTell.value)){
+    inputTell.style.borderColor = 'green'
+    button.disabled = false
+  } else {
+    inputTell.style.borderColor = 'red'
+    button.disabled = true
+  }
+})
 
 form.addEventListener('submit', function(e){
   e.preventDefault()          
