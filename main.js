@@ -50,6 +50,7 @@ function adicionandoLinha(){
 }
 
 function atualizaTabela(){
+  inputTell.style = ''
   let tableBody = document.querySelector('tbody')
   tableBody.innerHTML = linhas
 }
