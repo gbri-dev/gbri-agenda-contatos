@@ -40,7 +40,7 @@ function adicionandoLinha(){
     let linha = '<tr>'
     linha += `<td>${nome.value}</td>`
     linha += `<td>${numero.value}</td>`
-    linha += `<td><a href="https://api.whatsapp.com/send?phone=${numero.value}&text=Olá, gostaria de saber mais sobre o seu projeto" target="_blank">${whatsappIcon}</a></td>`
+    linha += `<td><a href="https://api.whatsapp.com/send?phone=${numero.value}&text=Olá, ${nome.value} você foi adicionado(a) á minha agênda de contatos." target="_blank">${whatsappIcon}</a></td>`
     linha += '</tr>'
     linhas += linha 
   }
